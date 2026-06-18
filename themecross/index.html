@@ -1,28 +1,135 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Сканворд 2026 / Arrowword 2026</title>
+  <meta name="description" content="Просто Сканворд — современный русский сканворд с живой лексикой, чистым интерфейсом и разумным балансом рекламы.">
+  <title>Просто Сканворд — современный русский сканворд</title>
   <style>
-    body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#17212b; background:#f5fbff; }
-    main { max-width:720px; margin:0 auto; padding:48px 20px; }
-    h1 { font-size:34px; line-height:1.15; margin:0 0 8px; }
-    a { color:#0f6aa8; }
-    .card { background:white; border:1px solid #d8e9f4; border-radius:12px; padding:24px; }
+    :root {
+      color-scheme: light;
+      --ink: #13283b;
+      --muted: #587083;
+      --blue: #0f6aa8;
+      --deep: #082f50;
+      --ice: #eef8ff;
+      --line: #cfe3f0;
+      --white: #fff;
+      --green: #42b96b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--ice);
+    }
+    header {
+      color: var(--white);
+      background: var(--deep);
+      padding: 72px 20px 64px;
+    }
+    .wrap { width: min(920px, 100%); margin: 0 auto; }
+    h1 {
+      max-width: 760px;
+      margin: 0 0 16px;
+      font-size: clamp(42px, 8vw, 72px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 700px;
+      margin: 0;
+      color: #d8edfb;
+      font-size: 21px;
+    }
+    main { padding: 48px 20px 64px; }
+    h2 { margin: 0 0 16px; font-size: 28px; line-height: 1.2; }
+    p { margin: 0 0 18px; }
+    .intro { max-width: 760px; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 36px 0 48px;
+    }
+    .feature {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+    .feature strong { display: block; margin-bottom: 6px; font-size: 18px; }
+    .feature p { margin: 0; color: var(--muted); }
+    .note {
+      margin: 40px 0;
+      padding: 22px;
+      border-left: 4px solid var(--green);
+      background: var(--white);
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+    a { color: var(--blue); font-weight: 650; }
+    footer { margin-top: 34px; color: var(--muted); font-size: 14px; }
+    @media (max-width: 640px) {
+      header { padding-top: 52px; }
+      .features { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-<main>
-  <section class="card">
-    <h1>Сканворд 2026 / Arrowword 2026</h1>
-    <p>Official support and legal pages.</p>
-    <ul>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="support.html">Support</a></li>
-      <li><a href="terms.html">Terms of Use</a></li>
-    </ul>
-  </section>
-</main>
+  <header>
+    <div class="wrap">
+      <h1>Просто Сканворд</h1>
+      <p class="lead">Современный русский сканворд с живой лексикой, чистым интерфейсом и без ощущения, что вы листаете старый справочник.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="intro">
+        <h2>Слова, которыми мы пользуемся сегодня</h2>
+        <p>При составлении сеток используются современные частотные словари, живая русская лексика и понятные отсылки к современной культуре. Вопросы должны быть интересными, а интерфейс — помогать разгадывать, а не мешать.</p>
+        <p>Откройте сетку, выберите вопрос и вводите ответ. Прогресс сохраняется, подсказки всегда под рукой, а новые уровни открываются по мере прохождения.</p>
+      </section>
+
+      <section class="features" aria-label="Особенности приложения">
+        <article class="feature">
+          <strong>Современная лексика</strong>
+          <p>Частотные словари, узнаваемые слова и актуальные культурные отсылки.</p>
+        </article>
+        <article class="feature">
+          <strong>Чистый интерфейс</strong>
+          <p>Быстрый ввод, понятные подсказки и минимум визуального шума.</p>
+        </article>
+        <article class="feature">
+          <strong>Разумная реклама</strong>
+          <p>Дополнительную рекламу за монеты или награду запускаете вы сами.</p>
+        </article>
+        <article class="feature">
+          <strong>Удобно на iPad</strong>
+          <p>Горизонтальный режим даёт больше места сетке, вопросам и управлению.</p>
+        </article>
+      </section>
+
+      <aside class="note">
+        <strong>Язык игры:</strong> игровые сетки, вопросы и ответы сейчас доступны на русском языке.
+      </aside>
+
+      <nav aria-label="Документы и поддержка">
+        <a href="support.html">Поддержка</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="mailto:u4170218021@gmail.com">u4170218021@gmail.com</a>
+      </nav>
+
+      <footer>© 2026 Dima Ershov</footer>
+    </div>
+  </main>
 </body>
 </html>
